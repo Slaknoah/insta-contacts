@@ -26,7 +26,7 @@ $ git submodule update --init --recursive
 $ cd api
 
 # Копировать файл .env
-$ cp .env-example .env
+$ cp .env.example .env
 
 # Перейти в папку laradock (.../insta-contact/api/laradock)
 $ cd laradock
@@ -34,9 +34,9 @@ $ cd laradock
 # Копировать файл .env
 $ cp env-example .env
 
-$ Запустить докер
-docker-compose up -d nginx mysql
-docker-compose exec workspace bash
+# Запустить докер
+$ docker-compose up -d nginx mysql
+$ docker-compose exec workspace bash
 ```
 Введите следующие команды в открывшемся bash
 ```bash
@@ -44,7 +44,7 @@ docker-compose exec workspace bash
 $ composer install
 
 # Миграция
-$ php artisan migrate --seed
+$ php artisan migrate:fresh --seed
 
 $ exit
 ```
