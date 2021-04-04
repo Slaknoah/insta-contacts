@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\API\ContactsController;
+use App\Http\Controllers\API\UsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'v1'], function(){
+    Route::get('/user', [ UsersController::class, 'show' ]);
+
+    // Contacts
+    Route::get('/contacts', [ ContactsController::class, 'index' ] );
+    Route::get('/user-contacts', [ ContactsController::class, 'getUserContacts' ] );
+    Route::put('/contacts/{contact}/bookmark', [ ContactsController::class, 'bookmark' ]);
+
 });
+

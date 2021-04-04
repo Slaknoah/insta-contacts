@@ -40,4 +40,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * A user bookmarks many contacts
+     */
+    public function contactsBookmarked()
+    {
+        return $this->belongsToMany('App\Models\Contact', 'contacts_bookmarks', 'user_id', 'contact_id');
+    }
 }
