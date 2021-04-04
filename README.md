@@ -26,7 +26,7 @@ $ git submodule update --init --recursive
 $ cd api
 
 # Копировать файл .env
-cp cp .env-example .env
+$ cp .env-example .env
 
 # Перейти в папку laradock (.../insta-contact/api/laradock)
 $ cd laradock
@@ -40,7 +40,7 @@ docker-compose exec workspace bash
 ```
 Введите следующие команды в открывшемся bash
 ```bash
-# Установить зависимости ( dependencies )
+# Установить ( dependencies )
 $ composer install
 
 # Миграция
@@ -52,17 +52,19 @@ $ exit
 #### Установка Frontend
 ```bash
 # Перейти в папку frontend  (.../insta-contacts/frontend)
-cd frontend
+$ cd frontend
 
 # Копировать файл .env
-cp env-example .env
+$ cp env-example .env
 
-# Установить зависимости ( dependencies )
-npm install
+# Установить ( dependencies )
+$ npm install
 
 # Запуск
-npm run dev
+$ npm run dev
 ```
+Загрузить [i-Contacts](http://localhost:4000)
+
 
 ## Лицензия
 
