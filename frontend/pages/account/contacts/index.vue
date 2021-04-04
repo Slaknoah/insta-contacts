@@ -46,11 +46,13 @@
             <book-mark class="cursor-pointer" @click="bookmarkContact( contact.id )" v-else></book-mark>
           </div>
         </div>
+      </div>
 
+      <div class="px-4 sm:px-6 w-full">
         <button
           v-show="showLoadMore"
           @click="loadMoreContacts"
-          class="border-2 tracking-wider border-gray-100 focus:outline-none bg-purple-600 text-white font-bold block p-2 px-4 mt-2 rounded-lg focus:border-gray-700 hover:bg-purple-700"
+          class="border-2 tracking-wider mx-auto border-gray-100 focus:outline-none bg-purple-600 text-white font-bold block p-2 px-4 mt-2 rounded-lg focus:border-gray-700 hover:bg-purple-700"
         >
           Загрузить еще
         </button>

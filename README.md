@@ -65,6 +65,9 @@ $ npm run dev
 ```
 Загрузить [i-Contacts](http://localhost:4000)
 
+### Демо-пользователь
+- Эл. адрес: user@gmail.com
+- Пароль: password
 
 ## Лицензия
 
